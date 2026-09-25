@@ -1,7 +1,7 @@
 {
   "version": 1,
   "name": "OpenFox Official Community Registry",
-  "updatedAt": "2026-09-25T16:27:00.223Z",
+  "updatedAt": "2026-09-25T16:35:37.958Z",
   "packs": [
     {
       "name": "devops-k8s",
@@ -25,7 +25,7 @@
         "cloud"
       ],
       "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/devops-k8s.json",
-      "updatedAt": "2026-09-25T16:27:00.222Z",
+      "updatedAt": "2026-09-25T16:35:37.957Z",
       "contentsSummary": {
         "workflows": [
           "Kubernetes Audit (k8s-audit)"
@@ -43,22 +43,23 @@
     },
     {
       "name": "jamesdadams-coucou",
-      "version": "1.0.1",
-      "displayName": "coucou-edited-6",
+      "version": "1.0.2",
+      "displayName": "coucou-edited-7",
       "description": "coucou6",
       "author": "JamesDAdams",
       "tags": [
         "community-pack"
       ],
       "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/jamesdadams-coucou.json",
-      "updatedAt": "2026-09-25T16:27:00.222Z",
+      "updatedAt": "2026-09-25T16:35:37.957Z",
       "contentsSummary": {
         "workflows": [
           "PR Review (review)"
         ],
         "skills": [
           "handoff",
-          "context7-mcp"
+          "context7-mcp",
+          "browser-tester"
         ]
       }
     },
@@ -72,7 +73,7 @@
         "community-pack"
       ],
       "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/jamesdadams-us-to-mr.json",
-      "updatedAt": "2026-09-25T16:27:00.223Z",
+      "updatedAt": "2026-09-25T16:35:37.958Z",
       "contentsSummary": {
         "workflows": [
           "US to MR (us-to-mr)"
@@ -128,7 +129,7 @@
         "quality"
       ],
       "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/pr-code-reviewer.json",
-      "updatedAt": "2026-09-25T16:27:00.223Z",
+      "updatedAt": "2026-09-25T16:35:37.958Z",
       "contentsSummary": {
         "workflows": [
           "PR Code Review (pr-review)"
