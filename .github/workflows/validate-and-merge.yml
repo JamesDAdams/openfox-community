@@ -36,7 +36,8 @@ jobs:
 
       - name: Validate PR rules & JSON schemas
         run: |
-          node scripts/validate.js
+          git show origin/main:scripts/validate.js > /tmp/validate.js
+          node /tmp/validate.js
 
       - name: Auto-merge Pull Request & Rebuild Index
         if: success()
