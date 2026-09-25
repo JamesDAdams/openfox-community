@@ -20,7 +20,14 @@
         "url": "https://github.com/JamesDAdams"
       },
       "tags": ["review", "security", "git", "quality"],
-      "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/pr-code-reviewer.json"
+      "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/pr-code-reviewer.json",
+      "contentsSummary": {
+        "workflows": ["PR Code Review (pr-review)"],
+        "agents": ["Security Reviewer (security-reviewer)", "Code Quality Reviewer (quality-reviewer)"],
+        "skills": ["OWASP Top 10 Security Checklist"],
+        "mcpServers": ["semgrep (Requires SEMGREP_APP_TOKEN)"],
+        "commands": ["/run-workflow pr-review"]
+      }
     },
     {
       "name": "devops-k8s",
@@ -38,7 +45,13 @@
         "url": "https://github.com/JamesDAdams"
       },
       "tags": ["devops", "k8s", "docker", "cloud"],
-      "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/devops-k8s.json"
+      "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/devops-k8s.json",
+      "contentsSummary": {
+        "workflows": ["Kubernetes & Container Audit (k8s-audit)"],
+        "agents": ["Docker & K8s Expert (docker-expert)"],
+        "skills": ["Dockerfile Best Practices"],
+        "commands": ["/run-workflow k8s-audit"]
+      }
     }
   ]
 }
