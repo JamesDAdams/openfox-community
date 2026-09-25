@@ -38,10 +38,10 @@ async function validate() {
         )
       }
 
-      // 2. Strict rule: only Added ('A') files are allowed. Editing/deleting existing packs is blocked.
-      if (change.status !== 'A') {
+      // 2. Allow Added ('A') and Modified ('M') files in packs/*.json. Deletions remain blocked.
+      if (change.status !== 'A' && change.status !== 'M') {
         throw new Error(
-          `Policy violation: Editing or deleting existing packs is currently disabled. Pack '${change.file}' has status '${change.status}'. Only new packs ('A') are allowed.`
+          `Policy violation: Deleting existing packs is disabled. Pack '${change.file}' has status '${change.status}'. Only new packs ('A') or modifications ('M') are allowed.`
         )
       }
 
