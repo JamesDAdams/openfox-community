@@ -1,34 +1,8 @@
 {
   "version": 1,
-  "name": "OpenFox Community Registry",
-  "description": "Official community registry for OpenFox workflows, agents, sub-agents, MCP servers, and skills.",
-  "updatedAt": "2026-09-25T00:00:00.000Z",
+  "name": "OpenFox Official Community Registry",
+  "updatedAt": "2026-09-25T12:53:09.370Z",
   "packs": [
-    {
-      "name": "pr-code-reviewer",
-      "version": "1.0.0",
-      "displayName": {
-        "en": "PR Code Reviewer",
-        "fr": "Revue Approfondie de PR"
-      },
-      "description": {
-        "en": "Automated code review workflow with specialized security (OWASP) and code quality agents.",
-        "fr": "Workflow de revue de code automatisé avec agents de sécurité (OWASP) et de qualité."
-      },
-      "author": {
-        "name": "James Adams",
-        "url": "https://github.com/JamesDAdams"
-      },
-      "tags": ["review", "security", "git", "quality"],
-      "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/pr-code-reviewer.json",
-      "contentsSummary": {
-        "workflows": ["PR Code Review (pr-review)"],
-        "agents": ["Security Reviewer (security-reviewer)", "Code Quality Reviewer (quality-reviewer)"],
-        "skills": ["OWASP Top 10 Security Checklist"],
-        "mcpServers": ["semgrep (Requires SEMGREP_APP_TOKEN)"],
-        "commands": ["/run-workflow pr-review"]
-      }
-    },
     {
       "name": "devops-k8s",
       "version": "1.0.0",
@@ -44,13 +18,69 @@
         "name": "James Adams",
         "url": "https://github.com/JamesDAdams"
       },
-      "tags": ["devops", "k8s", "docker", "cloud"],
+      "tags": [
+        "devops",
+        "k8s",
+        "docker",
+        "cloud"
+      ],
       "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/devops-k8s.json",
+      "updatedAt": "2026-09-25T12:53:09.369Z",
       "contentsSummary": {
-        "workflows": ["Kubernetes & Container Audit (k8s-audit)"],
-        "agents": ["Docker & K8s Expert (docker-expert)"],
-        "skills": ["Dockerfile Best Practices"],
-        "commands": ["/run-workflow k8s-audit"]
+        "workflows": [
+          "Kubernetes Audit (k8s-audit)"
+        ],
+        "agents": [
+          "Docker & K8s Expert (docker-expert)"
+        ],
+        "skills": [
+          "Dockerfile Best Practices"
+        ],
+        "commands": [
+          "/run-workflow k8s-audit"
+        ]
+      }
+    },
+    {
+      "name": "pr-code-reviewer",
+      "version": "1.0.0",
+      "displayName": {
+        "en": "PR Code Reviewer",
+        "fr": "Revue Approfondie de PR"
+      },
+      "description": {
+        "en": "Automated code review workflow with specialized security (OWASP) and code quality agents.",
+        "fr": "Workflow de revue de code automatisé avec agents de sécurité (OWASP) et de qualité."
+      },
+      "author": {
+        "name": "James Adams",
+        "url": "https://github.com/JamesDAdams"
+      },
+      "tags": [
+        "review",
+        "security",
+        "git",
+        "quality"
+      ],
+      "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/pr-code-reviewer.json",
+      "updatedAt": "2026-09-25T12:53:09.370Z",
+      "contentsSummary": {
+        "workflows": [
+          "PR Code Review (pr-review)"
+        ],
+        "agents": [
+          "Security Reviewer (security-reviewer)",
+          "Code Quality Reviewer (quality-reviewer)"
+        ],
+        "skills": [
+          "OWASP Top 10 Security Checklist"
+        ],
+        "commands": [
+          "/run-workflow pr-review"
+        ],
+        "mcpServers": [
+          "semgrep (Requires SEMGREP_APP_TOKEN)"
+        ]
       }
     }
   ]

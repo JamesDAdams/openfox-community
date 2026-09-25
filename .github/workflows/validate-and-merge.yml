@@ -1,0 +1,50 @@
+name: Validate and Auto-Merge Pack PR
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  validate-and-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout base main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Checkout PR head
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+
+      - name: Fetch base branch for diffing
+        run: |
+          git fetch origin main
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate PR rules & JSON schemas
+        run: |
+          node scripts/validate.js
+
+      - name: Auto-merge Pull Request
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          echo "All validation checks passed! Merging PR #$PR_NUMBER automatically..."
+          gh api repos/$REPO/pulls/$PR_NUMBER/merge -X PUT -f merge_method=squash -f commit_title="feat(pack): merge PR #$PR_NUMBER - ${{ github.event.pull_request.title }}"
+          echo "PR #$PR_NUMBER successfully merged!"
