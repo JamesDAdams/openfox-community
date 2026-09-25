@@ -1,7 +1,7 @@
 {
   "version": 1,
   "name": "OpenFox Official Community Registry",
-  "updatedAt": "2026-09-25T13:31:00.536Z",
+  "updatedAt": "2026-09-25T13:36:03.294Z",
   "packs": [
     {
       "name": "devops-k8s",
@@ -25,7 +25,7 @@
         "cloud"
       ],
       "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/devops-k8s.json",
-      "updatedAt": "2026-09-25T13:31:00.534Z",
+      "updatedAt": "2026-09-25T13:36:03.294Z",
       "contentsSummary": {
         "workflows": [
           "Kubernetes Audit (k8s-audit)"
@@ -38,182 +38,6 @@
         ],
         "commands": [
           "/run-workflow k8s-audit"
-        ]
-      }
-    },
-    {
-      "name": "jamesdadams-automated-pr-delivery-pack",
-      "version": "1.0.0",
-      "displayName": "Automated PR Delivery Pack",
-      "description": "End to end PR delivery workflow and subagents",
-      "author": "JamesDAdams",
-      "tags": [
-        "community-pack"
-      ],
-      "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/jamesdadams-automated-pr-delivery-pack.json",
-      "updatedAt": "2026-09-25T13:31:00.534Z",
-      "contentsSummary": {
-        "workflows": [
-          "US to MR (us-to-mr)"
-        ],
-        "agents": [
-          "Tester (tester)"
-        ],
-        "subAgents": [
-          "Jira Agent (jira_agent)",
-          "Git Agent (git_agent)",
-          "Figma Designer Agent (figma_designer)",
-          "E2E & Automated Test Runner (e2e_tester)",
-          "Mobile Tester (mobile_tester)",
-          "Web Tester (web_tester)"
-        ],
-        "skills": [
-          "jira-workflow",
-          "figma-inspector",
-          "git-commit-push",
-          "gitlab-mr",
-          "build-install-mobile-app",
-          "connexion-gconnect",
-          "native-mobile-tester",
-          "browser-tester",
-          "launch-dev-server"
-        ],
-        "mcpServers": [
-          "Jira (Requires JIRA_API_TOKEN)",
-          "Figma (Requires FIGMA_TOKEN)",
-          "mobile-mcp"
-        ]
-      }
-    },
-    {
-      "name": "jamesdadams-fullstack-jira-gitlab-delivery-bundle",
-      "version": "1.0.0",
-      "displayName": "Fullstack Jira GitLab Delivery Bundle",
-      "description": "Automated issue to merge request pipeline",
-      "author": "JamesDAdams",
-      "tags": [
-        "community-pack"
-      ],
-      "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/jamesdadams-fullstack-jira-gitlab-delivery-bundle.json",
-      "updatedAt": "2026-09-25T13:31:00.535Z",
-      "contentsSummary": {
-        "workflows": [
-          "US to MR (us-to-mr)"
-        ],
-        "agents": [
-          "Tester (tester)"
-        ],
-        "subAgents": [
-          "Jira Agent (jira_agent)",
-          "Git Agent (git_agent)",
-          "Figma Designer Agent (figma_designer)",
-          "E2E & Automated Test Runner (e2e_tester)",
-          "Mobile Tester (mobile_tester)",
-          "Web Tester (web_tester)"
-        ],
-        "skills": [
-          "jira-workflow",
-          "figma-inspector",
-          "git-commit-push",
-          "gitlab-mr",
-          "build-install-mobile-app",
-          "connexion-gconnect",
-          "native-mobile-tester",
-          "browser-tester",
-          "launch-dev-server"
-        ],
-        "mcpServers": [
-          "Jira (Requires JIRA_API_TOKEN)",
-          "Figma (Requires FIGMA_TOKEN)",
-          "mobile-mcp"
-        ]
-      }
-    },
-    {
-      "name": "jamesdadams-jira-git-us-to-mr-pack",
-      "version": "1.0.0",
-      "displayName": "Jira Git US to MR Pack",
-      "description": "Automated Jira and Git workflow bundle",
-      "author": "JamesDAdams",
-      "tags": [
-        "community-pack"
-      ],
-      "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/jamesdadams-jira-git-us-to-mr-pack.json",
-      "updatedAt": "2026-09-25T13:31:00.535Z",
-      "contentsSummary": {
-        "workflows": [
-          "US to MR (us-to-mr)"
-        ],
-        "agents": [
-          "Tester (tester)"
-        ],
-        "subAgents": [
-          "Jira Agent (jira_agent)",
-          "Git Agent (git_agent)",
-          "Figma Designer Agent (figma_designer)",
-          "E2E & Automated Test Runner (e2e_tester)",
-          "Mobile Tester (mobile_tester)",
-          "Web Tester (web_tester)"
-        ],
-        "skills": [
-          "jira-workflow",
-          "figma-inspector",
-          "git-commit-push",
-          "gitlab-mr",
-          "build-install-mobile-app",
-          "connexion-gconnect",
-          "native-mobile-tester",
-          "browser-tester",
-          "launch-dev-server"
-        ],
-        "mcpServers": [
-          "Jira (Requires JIRA_API_TOKEN)",
-          "Figma (Requires FIGMA_TOKEN)",
-          "mobile-mcp"
-        ]
-      }
-    },
-    {
-      "name": "jamesdadams-us-to-mr",
-      "version": "1.0.0",
-      "displayName": "us-to-mr",
-      "description": "test",
-      "author": "JamesDAdams",
-      "tags": [
-        "community-pack"
-      ],
-      "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/jamesdadams-us-to-mr.json",
-      "updatedAt": "2026-09-25T13:31:00.535Z",
-      "contentsSummary": {
-        "workflows": [
-          "US to MR (us-to-mr)"
-        ],
-        "agents": [
-          "Tester (tester)"
-        ],
-        "subAgents": [
-          "Jira Agent (jira_agent)",
-          "Git Agent (git_agent)",
-          "Figma Designer Agent (figma_designer)",
-          "E2E & Automated Test Runner (e2e_tester)",
-          "Mobile Tester (mobile_tester)",
-          "Web Tester (web_tester)"
-        ],
-        "skills": [
-          "jira-workflow",
-          "figma-inspector",
-          "git-commit-push",
-          "gitlab-mr",
-          "build-install-mobile-app",
-          "connexion-gconnect",
-          "native-mobile-tester",
-          "browser-tester",
-          "launch-dev-server"
-        ],
-        "mcpServers": [
-          "Jira (Requires JIRA_API_TOKEN)",
-          "Figma (Requires FIGMA_TOKEN)",
-          "mobile-mcp"
         ]
       }
     },
@@ -239,7 +63,7 @@
         "quality"
       ],
       "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/pr-code-reviewer.json",
-      "updatedAt": "2026-09-25T13:31:00.536Z",
+      "updatedAt": "2026-09-25T13:36:03.294Z",
       "contentsSummary": {
         "workflows": [
           "PR Code Review (pr-review)"
