@@ -1,10 +1,8 @@
 import { readFile } from 'node:fs/promises'
 import { execSync } from 'node:child_process'
-import { join, dirname } from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { join } from 'node:path'
 
-const __dirname = dirname(fileURLToPath(import.meta.url))
-const rootDir = join(__dirname, '..')
+const rootDir = process.cwd()
 
 function getChangedFiles() {
   try {
