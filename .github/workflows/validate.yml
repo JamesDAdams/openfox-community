@@ -1,0 +1,21 @@
+name: Validate Registry & Packs
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate JSON syntax
+        run: |
+          jq . index.json > /dev/null
+          for f in packs/*.json; do
+            echo "Checking $f..."
+            jq . "$f" > /dev/null
+          done
+          echo "All pack JSON files are valid!"

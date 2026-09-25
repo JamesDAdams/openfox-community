@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "name": "devops-k8s",
+  "version": "1.0.0",
+  "displayName": {
+    "en": "DevOps Kubernetes & Docker",
+    "fr": "DevOps Kubernetes & Docker"
+  },
+  "description": {
+    "en": "Workflow and agents to validate Dockerfiles, Helm charts, and Kubernetes manifests.",
+    "fr": "Workflow et agents pour valider vos Dockerfiles, charts Helm et manifestes Kubernetes."
+  },
+  "author": {
+    "name": "James Adams",
+    "url": "https://github.com/JamesDAdams"
+  },
+  "tags": ["devops", "k8s", "docker", "cloud"],
+  "contents": {
+    "workflows": [
+      {
+        "id": "k8s-audit",
+        "name": "Kubernetes Audit",
+        "description": "Inspect containers and k8s resources",
+        "entryStep": "docker-lint",
+        "steps": [
+          {
+            "id": "docker-lint",
+            "name": "Dockerfile Linting",
+            "type": "agent",
+            "agentMode": "docker-expert",
+            "transitions": [{ "target": "$done" }]
+          }
+        ]
+      }
+    ],
+    "agents": [
+      {
+        "id": "docker-expert",
+        "name": "Docker & K8s Expert",
+        "description": "Optimizes Dockerfiles and validates manifests",
+        "prompt": "You are a DevOps containerization expert. Analyze Dockerfiles for multi-stage builds, minimal base images, and security best practices.",
+        "allowedTools": ["read_file", "run_command"]
+      }
+    ],
+    "skills": [
+      {
+        "id": "dockerfile-best-practices",
+        "name": "Dockerfile Best Practices",
+        "description": "Rules for optimal container images",
+        "prompt": "# Dockerfile Best Practices\n- Pin exact base image versions\n- Run as non-root user\n- Use multi-stage builds\n- Never bake secrets or tokens into image layers"
+      }
+    ],
+    "commands": [
+      {
+        "id": "k8s-audit",
+        "name": "Audit Containers & K8s",
+        "prompt": "/run-workflow k8s-audit"
+      }
+    ]
+  }
+}

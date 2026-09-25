@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "name": "pr-code-reviewer",
+  "version": "1.0.0",
+  "displayName": {
+    "en": "PR Code Reviewer",
+    "fr": "Revue Approfondie de PR"
+  },
+  "description": {
+    "en": "Automated code review workflow with specialized security (OWASP) and code quality agents.",
+    "fr": "Workflow de revue de code automatisé avec agents de sécurité (OWASP) et de qualité."
+  },
+  "author": {
+    "name": "James Adams",
+    "url": "https://github.com/JamesDAdams"
+  },
+  "tags": ["review", "security", "git", "quality"],
+  "contents": {
+    "workflows": [
+      {
+        "id": "pr-review",
+        "name": "PR Code Review",
+        "description": "Multi-agent PR inspection workflow",
+        "entryStep": "security-scan",
+        "steps": [
+          {
+            "id": "security-scan",
+            "name": "Security Scan",
+            "type": "agent",
+            "agentMode": "security-reviewer",
+            "transitions": [
+              {
+                "target": "quality-check",
+                "condition": "outcome.result == 'ok'"
+              }
+            ]
+          },
+          {
+            "id": "quality-check",
+            "name": "Code Quality Check",
+            "type": "agent",
+            "agentMode": "quality-reviewer",
+            "transitions": [
+              {
+                "target": "$done"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "agents": [
+      {
+        "id": "security-reviewer",
+        "name": "Security Reviewer",
+        "description": "Audits changes for security flaws and secrets leaks",
+        "prompt": "You are an expert security auditor. Review the codebase changes against OWASP Top 10 vulnerabilities.",
+        "allowedTools": ["read_file", "mcp:semgrep:scan"],
+        "skills": ["owasp-top10"],
+        "mcpServers": ["semgrep"]
+      },
+      {
+        "id": "quality-reviewer",
+        "name": "Code Quality Reviewer",
+        "description": "Checks code style, maintainability, and tests",
+        "prompt": "Review code changes for maintainability, clarity, test coverage, and performance.",
+        "allowedTools": ["read_file", "run_command"]
+      }
+    ],
+    "skills": [
+      {
+        "id": "owasp-top10",
+        "name": "OWASP Top 10 Security Checklist",
+        "description": "OWASP Top 10 security guidelines",
+        "prompt": "# OWASP Top 10 Security Checklist\n\n1. Injection\n2. Broken Authentication\n3. Sensitive Data Exposure\n4. XML External Entities (XXE)\n5. Broken Access Control\n6. Security Misconfigurations\n7. Cross-Site Scripting (XSS)\n8. Insecure Deserialization\n9. Known Vulnerabilities\n10. Insufficient Logging & Monitoring"
+      }
+    ],
+    "commands": [
+      {
+        "id": "review-pr",
+        "name": "Review PR",
+        "prompt": "/run-workflow pr-review"
+      }
+    ],
+    "mcpServers": {
+      "semgrep": {
+        "transport": "stdio",
+        "command": "npx",
+        "args": ["-y", "@semgrep/mcp"],
+        "envRequirements": [
+          {
+            "key": "SEMGREP_APP_TOKEN",
+            "description": "API token for Semgrep Pro / Cloud rules",
+            "required": true
+          }
+        ]
+      }
+    }
+  }
+}

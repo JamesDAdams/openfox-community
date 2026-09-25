@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "name": "OpenFox Community Registry",
+  "description": "Official community registry for OpenFox workflows, agents, sub-agents, MCP servers, and skills.",
+  "updatedAt": "2026-09-25T00:00:00.000Z",
+  "packs": [
+    {
+      "name": "pr-code-reviewer",
+      "version": "1.0.0",
+      "displayName": {
+        "en": "PR Code Reviewer",
+        "fr": "Revue Approfondie de PR"
+      },
+      "description": {
+        "en": "Automated code review workflow with specialized security (OWASP) and code quality agents.",
+        "fr": "Workflow de revue de code automatisé avec agents de sécurité (OWASP) et de qualité."
+      },
+      "author": {
+        "name": "James Adams",
+        "url": "https://github.com/JamesDAdams"
+      },
+      "tags": ["review", "security", "git", "quality"],
+      "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/pr-code-reviewer.json"
+    },
+    {
+      "name": "devops-k8s",
+      "version": "1.0.0",
+      "displayName": {
+        "en": "DevOps Kubernetes & Docker",
+        "fr": "DevOps Kubernetes & Docker"
+      },
+      "description": {
+        "en": "Workflow and agents to validate Dockerfiles, Helm charts, and Kubernetes manifests.",
+        "fr": "Workflow et agents pour valider vos Dockerfiles, charts Helm et manifestes Kubernetes."
+      },
+      "author": {
+        "name": "James Adams",
+        "url": "https://github.com/JamesDAdams"
+      },
+      "tags": ["devops", "k8s", "docker", "cloud"],
+      "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/devops-k8s.json"
+    }
+  ]
+}
