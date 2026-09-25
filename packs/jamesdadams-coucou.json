@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "name": "jamesdadams-coucou",
-  "version": "1.0.0",
-  "displayName": "coucou",
-  "description": "coucou2",
+  "version": "1.0.1",
+  "displayName": "coucou-edited5",
+  "description": "coucou5",
   "author": "JamesDAdams",
   "tags": [
     "community-pack"
@@ -264,6 +264,12 @@
         "name": "handoff",
         "description": "Compact the current conversation into a handoff document for another agent to pick up.",
         "prompt": "Write a handoff document summarising the current conversation so a fresh agent can continue the work. Save to the temporary directory of the user's OS - not the current workspace.\n\nInclude a \"suggested skills\" section in the document, naming which skills the next agent should call the Skill tool for.\n\nDo not duplicate content already captured in other artifacts (specs, plans, ADRs, issues, commits, diffs). Reference them by path or URL instead.\n\nRedact any sensitive information, such as API keys, passwords, or personally identifiable information.\n\nIf the user passed arguments, treat them as a description of what the next session will focus on and tailor the doc accordingly."
+      },
+      {
+        "id": "context7-mcp",
+        "name": "context7-mcp",
+        "description": "This skill should be used when the user asks about libraries, frameworks, API references, or needs code examples. Activates for setup questions, code generation involving libraries, or mentions of specific frameworks like React, Vue, Next.js, Prisma, Supabase, etc.",
+        "prompt": "When the user asks about libraries, frameworks, or needs code examples, use Context7 to fetch current documentation instead of relying on training data.\n\n## When to Use This Skill\n\nActivate this skill when the user:\n\n- Asks setup or configuration questions (\"How do I configure Next.js middleware?\")\n- Requests code involving libraries (\"Write a Prisma query for...\")\n- Needs API references (\"What are the Supabase auth methods?\")\n- Mentions specific frameworks (React, Vue, Svelte, Express, Tailwind, etc.)\n\n## How to Fetch Documentation\n\n### Step 1: Resolve the Library ID\n\nCall `resolve-library-id` with:\n\n- `libraryName`: The library name extracted from the user's question\n- `query`: The user's full question (improves relevance ranking)\n\n### Step 2: Select the Best Match\n\nFrom the resolution results, choose based on:\n\n- Exact or closest name match to what the user asked for\n- Higher benchmark scores indicate better documentation quality\n- If the user mentioned a version (e.g., \"React 19\"), prefer version-specific IDs\n\n### Step 3: Fetch the Documentation\n\nCall `query-docs` with:\n\n- `libraryId`: The selected Context7 library ID (e.g., `/vercel/next.js`)\n- `query`: The user's specific question\n\n### Step 4: Use the Documentation\n\nIncorporate the fetched documentation into your response:\n\n- Answer the user's question using current, accurate information\n- Include relevant code examples from the docs\n- Cite the library version when relevant\n\n## Guidelines\n\n- **Be specific**: Pass the user's full question as the query for better results\n- **Version awareness**: When users mention versions (\"Next.js 15\", \"React 19\"), use version-specific library IDs if available from the resolution step\n- **Prefer official sources**: When multiple matches exist, prefer official/primary packages over community forks"
       }
     ]
   }
