@@ -1,7 +1,7 @@
 {
   "version": 1,
   "name": "OpenFox Official Community Registry",
-  "updatedAt": "2026-09-25T15:05:42.338Z",
+  "updatedAt": "2026-09-25T15:11:57.748Z",
   "packs": [
     {
       "name": "devops-k8s",
@@ -25,7 +25,7 @@
         "cloud"
       ],
       "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/devops-k8s.json",
-      "updatedAt": "2026-09-25T15:05:42.336Z",
+      "updatedAt": "2026-09-25T15:11:57.746Z",
       "contentsSummary": {
         "workflows": [
           "Kubernetes Audit (k8s-audit)"
@@ -51,7 +51,27 @@
         "community-pack"
       ],
       "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/jamesdadams-coucou-edited.json",
-      "updatedAt": "2026-09-25T15:05:42.336Z",
+      "updatedAt": "2026-09-25T15:11:57.747Z",
+      "contentsSummary": {
+        "workflows": [
+          "PR Review (review)"
+        ],
+        "skills": [
+          "handoff"
+        ]
+      }
+    },
+    {
+      "name": "jamesdadams-coucou-edited2",
+      "version": "1.0.2",
+      "displayName": "coucou edited2",
+      "description": "coucou2 edited2",
+      "author": "JamesDAdams",
+      "tags": [
+        "community-pack"
+      ],
+      "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/jamesdadams-coucou-edited2.json",
+      "updatedAt": "2026-09-25T15:11:57.747Z",
       "contentsSummary": {
         "workflows": [
           "PR Review (review)"
@@ -71,7 +91,7 @@
         "community-pack"
       ],
       "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/jamesdadams-coucou.json",
-      "updatedAt": "2026-09-25T15:05:42.337Z",
+      "updatedAt": "2026-09-25T15:11:57.747Z",
       "contentsSummary": {
         "workflows": [
           "PR Review (review)"
@@ -91,7 +111,7 @@
         "community-pack"
       ],
       "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/jamesdadams-us-to-mr.json",
-      "updatedAt": "2026-09-25T15:05:42.337Z",
+      "updatedAt": "2026-09-25T15:11:57.748Z",
       "contentsSummary": {
         "workflows": [
           "US to MR (us-to-mr)"
@@ -147,7 +167,7 @@
         "quality"
       ],
       "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/pr-code-reviewer.json",
-      "updatedAt": "2026-09-25T15:05:42.338Z",
+      "updatedAt": "2026-09-25T15:11:57.748Z",
       "contentsSummary": {
         "workflows": [
           "PR Code Review (pr-review)"
