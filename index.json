@@ -2,7 +2,7 @@
   "version": 1,
   "name": "OpenFox Community Registry",
   "description": "Official community registry for OpenFox workflows, agents, sub-agents, MCP servers, and skills.",
-  "updatedAt": "2026-09-25T00:00:00.000Z",
+  "updatedAt": "2026-09-25T12:43:16.897Z",
   "packs": [
     {
       "name": "pr-code-reviewer",
@@ -19,14 +19,30 @@
         "name": "James Adams",
         "url": "https://github.com/JamesDAdams"
       },
-      "tags": ["review", "security", "git", "quality"],
+      "tags": [
+        "review",
+        "security",
+        "git",
+        "quality"
+      ],
       "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/pr-code-reviewer.json",
       "contentsSummary": {
-        "workflows": ["PR Code Review (pr-review)"],
-        "agents": ["Security Reviewer (security-reviewer)", "Code Quality Reviewer (quality-reviewer)"],
-        "skills": ["OWASP Top 10 Security Checklist"],
-        "mcpServers": ["semgrep (Requires SEMGREP_APP_TOKEN)"],
-        "commands": ["/run-workflow pr-review"]
+        "workflows": [
+          "PR Code Review (pr-review)"
+        ],
+        "agents": [
+          "Security Reviewer (security-reviewer)",
+          "Code Quality Reviewer (quality-reviewer)"
+        ],
+        "skills": [
+          "OWASP Top 10 Security Checklist"
+        ],
+        "mcpServers": [
+          "semgrep (Requires SEMGREP_APP_TOKEN)"
+        ],
+        "commands": [
+          "/run-workflow pr-review"
+        ]
       }
     },
     {
@@ -44,13 +60,71 @@
         "name": "James Adams",
         "url": "https://github.com/JamesDAdams"
       },
-      "tags": ["devops", "k8s", "docker", "cloud"],
+      "tags": [
+        "devops",
+        "k8s",
+        "docker",
+        "cloud"
+      ],
       "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/devops-k8s.json",
       "contentsSummary": {
-        "workflows": ["Kubernetes & Container Audit (k8s-audit)"],
-        "agents": ["Docker & K8s Expert (docker-expert)"],
-        "skills": ["Dockerfile Best Practices"],
-        "commands": ["/run-workflow k8s-audit"]
+        "workflows": [
+          "Kubernetes & Container Audit (k8s-audit)"
+        ],
+        "agents": [
+          "Docker & K8s Expert (docker-expert)"
+        ],
+        "skills": [
+          "Dockerfile Best Practices"
+        ],
+        "commands": [
+          "/run-workflow k8s-audit"
+        ]
+      }
+    },
+    {
+      "name": "jamesdadams-us-to-mr",
+      "version": "1.0.0",
+      "displayName": "US to MR",
+      "description": "test",
+      "author": "JamesDAdams",
+      "tags": [
+        "community-pack"
+      ],
+      "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/jamesdadams-us-to-mr.json",
+      "updatedAt": "2026-09-25T12:43:16.897Z",
+      "contentsSummary": {
+        "workflows": [
+          "US to MR (us-to-mr)"
+        ],
+        "agents": [
+          "Tester (tester)"
+        ],
+        "subAgents": [
+          "Jira Agent (jira_agent)",
+          "Git Agent (git_agent)",
+          "Figma Designer Agent (figma_designer)",
+          "E2E & Automated Test Runner (e2e_tester)",
+          "Mobile Tester (mobile_tester)",
+          "Web Tester (web_tester)"
+        ],
+        "skills": [
+          "jira-workflow",
+          "figma-inspector",
+          "git-commit-push",
+          "gitlab-mr",
+          "build-install-mobile-app",
+          "connexion-gconnect",
+          "native-mobile-tester",
+          "browser-tester",
+          "launch-dev-server"
+        ],
+        "commands": [],
+        "mcpServers": [
+          "Jira (Requires JIRA_API_TOKEN)",
+          "Figma (Requires FIGMA_TOKEN)",
+          "mobile-mcp"
+        ]
       }
     }
   ]
