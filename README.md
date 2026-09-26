@@ -30,7 +30,7 @@ Or open the **Community Hub** tab in OpenFox Settings to browse and install pack
      "description": "Short description of what the pack does",
      "author": { "name": "Your Name", "url": "https://github.com/yourusername" },
      "tags": ["workflow", "tools"],
-     "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/my-pack.json"
+     "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community-hub-Registry/main/packs/my-pack.json"
    }
    ```
 4. Open a Pull Request! Once merged, your pack is instantly available to all OpenFox users worldwide without any backend infrastructure.

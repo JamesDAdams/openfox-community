@@ -24,7 +24,7 @@
         "docker",
         "cloud"
       ],
-      "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/devops-k8s.json",
+      "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community-hub-Registry/main/packs/devops-k8s.json",
       "updatedAt": "2026-09-26T08:22:42.407Z",
       "contentsSummary": {
         "workflows": [
@@ -38,74 +38,6 @@
         ],
         "commands": [
           "/run-workflow k8s-audit"
-        ]
-      }
-    },
-    {
-      "name": "jamesdadams-coucou",
-      "version": "1.0.4",
-      "displayName": "coucou-edited-9",
-      "description": "coucou9",
-      "author": "JamesDAdams",
-      "tags": [
-        "community-pack"
-      ],
-      "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/jamesdadams-coucou.json",
-      "updatedAt": "2026-09-26T08:22:42.407Z",
-      "contentsSummary": {
-        "workflows": [
-          "PR Review (review)"
-        ],
-        "skills": [
-          "handoff",
-          "context7-mcp",
-          "browser-tester",
-          "build-install-mobile-app",
-          "jira-workflow"
-        ]
-      }
-    },
-    {
-      "name": "jamesdadams-us-to-mr",
-      "version": "1.0.0",
-      "displayName": "us to mr",
-      "description": "test",
-      "author": "JamesDAdams",
-      "tags": [
-        "community-pack"
-      ],
-      "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/jamesdadams-us-to-mr.json",
-      "updatedAt": "2026-09-26T08:22:42.408Z",
-      "contentsSummary": {
-        "workflows": [
-          "US to MR (us-to-mr)"
-        ],
-        "agents": [
-          "Tester (tester)"
-        ],
-        "subAgents": [
-          "Jira Agent (jira_agent)",
-          "Git Agent (git_agent)",
-          "Figma Designer Agent (figma_designer)",
-          "E2E & Automated Test Runner (e2e_tester)",
-          "Mobile Tester (mobile_tester)",
-          "Web Tester (web_tester)"
-        ],
-        "skills": [
-          "jira-workflow",
-          "figma-inspector",
-          "git-commit-push",
-          "gitlab-mr",
-          "build-install-mobile-app",
-          "connexion-gconnect",
-          "native-mobile-tester",
-          "browser-tester",
-          "launch-dev-server"
-        ],
-        "mcpServers": [
-          "Jira (Requires JIRA_API_TOKEN)",
-          "Figma (Requires FIGMA_TOKEN)",
-          "mobile-mcp"
         ]
       }
     },
@@ -130,7 +62,7 @@
         "git",
         "quality"
       ],
-      "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/pr-code-reviewer.json",
+      "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community-hub-Registry/main/packs/pr-code-reviewer.json",
       "updatedAt": "2026-09-26T08:22:42.408Z",
       "contentsSummary": {
         "workflows": [
