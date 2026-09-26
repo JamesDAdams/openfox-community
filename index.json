@@ -1,7 +1,7 @@
 {
   "version": 1,
   "name": "OpenFox Official Community Registry",
-  "updatedAt": "2026-09-26T08:22:42.408Z",
+  "updatedAt": "2026-09-26T21:07:17.315Z",
   "packs": [
     {
       "name": "devops-k8s",
@@ -24,8 +24,8 @@
         "docker",
         "cloud"
       ],
-      "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community-hub-Registry/main/packs/devops-k8s.json",
-      "updatedAt": "2026-09-26T08:22:42.407Z",
+      "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/devops-k8s.json",
+      "updatedAt": "2026-09-26T21:07:17.314Z",
       "contentsSummary": {
         "workflows": [
           "Kubernetes Audit (k8s-audit)"
@@ -62,8 +62,8 @@
         "git",
         "quality"
       ],
-      "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community-hub-Registry/main/packs/pr-code-reviewer.json",
-      "updatedAt": "2026-09-26T08:22:42.408Z",
+      "downloadUrl": "https://raw.githubusercontent.com/JamesDAdams/openfox-community/main/packs/pr-code-reviewer.json",
+      "updatedAt": "2026-09-26T21:07:17.315Z",
       "contentsSummary": {
         "workflows": [
           "PR Code Review (pr-review)"
